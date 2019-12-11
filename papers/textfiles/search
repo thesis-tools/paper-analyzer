@@ -1,0 +1,5 @@
+#!/bin/zsh
+# replace  "thesis" with your desired regex! 
+grep -r $1 . | awk -F '-' '{print $1}' | awk -F ':' '{print $1}' | uniq -c
+
+
